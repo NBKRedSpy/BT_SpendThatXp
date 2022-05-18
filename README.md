@@ -23,4 +23,4 @@ This assumes ModTek has been installed and injected.
 
 # Compatibility
 This should be compatible with all mods.
-Can be added into existing saves.
+Safe to add to and remove from existing saves.
