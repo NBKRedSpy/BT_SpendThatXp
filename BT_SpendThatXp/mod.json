@@ -1,0 +1,15 @@
+﻿{
+  "Name": "BT_SpendThatXp",
+  "Version": "1.0.0.0",
+  "Description": "",
+  "Author": "NBK_RedSpy",
+  "Website": "https://github.com/NBKRedSpy/BT_SpendThatXp",
+
+  "Enabled": true,
+
+  "DLL": "BT_SpendThatXp.dll",
+
+  "Settings": {
+  }
+
+}
