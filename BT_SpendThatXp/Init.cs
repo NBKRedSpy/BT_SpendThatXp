@@ -14,9 +14,19 @@ namespace BT_SpendThatXp
     {
         public static void Init(string directory, string settingsJSON)
         {
-            Logger.Clear();
-            var harmony = HarmonyInstance.Create("io.github.nbk_redspy.BT_SpendThatXp");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            try
+            {
+                Logger.Clear();
+                var harmony = HarmonyInstance.Create("io.github.nbk_redspy.BT_SpendThatXp");
+                harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+                Core.Settings = (ModSettings)JsonConvert.DeserializeObject( settingsJSON, typeof(ModSettings));
+
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+            }
         }
     }
 }

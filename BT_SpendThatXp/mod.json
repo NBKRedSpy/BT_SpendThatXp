@@ -10,6 +10,9 @@
   "DLL": "BT_SpendThatXp.dll",
 
   "Settings": {
+    "Level1Color": "#8AF257",
+    "Level2Color": "#FFFF00",
+    "Level3Color": "#FFA3A3"
   }
 
 }

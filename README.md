@@ -13,7 +13,19 @@ Yellow| 2
 Red | 3 or more
 
 
+# Custom Colors
 
+The colors can be customized in the mod.json file.
+The colors must be in the RGB format and must start with '#'
+
+A useful color picker tool can be found at [https://htmlcolor-picker.com](https://htmlcolor-picker.com)
+
+
+|Setting| Upgrades Available| Default Color
+|-|-|-|
+Level1Color | 1 |  #8AF257
+Level2Color | 2 | #FFFF00
+Level3Color | 3 or more | #FFA3A3
 
 # Installation
 To install, download the zip file from the releases section and extract to the Battletech Mods folder.

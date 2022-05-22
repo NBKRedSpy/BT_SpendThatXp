@@ -92,25 +92,24 @@ namespace BT_SpendThatXp.Patches
         private static void SetSkillColor(SGBarracksRosterSlot __instance, int currentSkillLevel, int unspentXp,
             FieldInfo targetSkillLabelInfo)
         {
+
             int maxLevelIncrease = XpTotalCost.FindLastIndex(x => x <= XpTotalCost[currentSkillLevel - 1] + unspentXp) -
                 (currentSkillLevel - 1);
-
-
 
             if (maxLevelIncrease > 0)
             {
                 string highlightColor;
                 if (maxLevelIncrease == 1)
                 {
-                    highlightColor = "#A3FF7C";
+                    highlightColor = Core.Settings.Level1Color;
                 }
                 else if (maxLevelIncrease == 2)
                 {
-                    highlightColor = "#FFE77C";
+                    highlightColor = Core.Settings.Level2Color;
                 }
                 else
                 {
-                    highlightColor = "#FFA3A3";
+                    highlightColor = Core.Settings.Level3Color;
                 }
 
                 var skillLabel = (LocalizableText)targetSkillLabelInfo.GetValue(__instance);
