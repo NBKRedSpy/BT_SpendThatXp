@@ -2,7 +2,8 @@
 
 Have you ever just launched a mission and thought "I forgot to update my pilot's skills!"
 
-<img width="312" alt="SpendThatXpDetail" src="https://user-images.githubusercontent.com/54865934/168941474-25028cf6-7bc2-41e5-95e5-612b4c17b971.png">
+<img width="296" alt="SpendThatXpDetail" src="https://user-images.githubusercontent.com/54865934/168945528-5f82c099-4057-4048-a664-5f7230f510f5.png">
+
 
 This mod will indicate if a pilot has any skills that can be upgraded using subtle colors.
 
@@ -34,4 +35,4 @@ This assumes ModTek has been installed and injected.
 
 # Compatibility
 This should be compatible with all mods.
-Can be added into existing saves.
+Safe to add to and remove from existing saves.
