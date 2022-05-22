@@ -26,21 +26,33 @@ namespace BT_SpendThatXp.Patches
         /// </summary>
         public static List<int> XpTotalCost { get; set; }
 
-        static SpendXp()
+        public static SimGameState sim;
+
+
+        private static void InitXpTotalCost()
         {
-            XpTotalCost = new List<int>()
+
+            if (XpTotalCost != null) return;
+
+            var sim = UnityGameInstance.BattleTechGame.Simulation;
+
+            if(sim == null)
             {
-                0
-                ,100
-                ,500
-                ,1400
-                ,3000
-                ,5500
-                ,9100
-                ,14000
-                ,20400
-                ,28500
-            };
+                throw new ApplicationException("Simulation is null");
+            }
+
+            XpTotalCost = new List<int>();
+
+            int sum = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                int xpCost = sim.GetLevelCost(i);
+
+                sum += xpCost;
+
+                XpTotalCost.Add(sum);
+            }
         }
 
         public static void Postfix(SGBarracksRosterSlot __instance)
@@ -49,6 +61,8 @@ namespace BT_SpendThatXp.Patches
             {
                 Pilot pilot = __instance.Pilot;
                 if (pilot == null) return;
+
+                InitXpTotalCost();
 
 
                 if (AccessFields == null)

@@ -14,6 +14,7 @@ namespace BT_SpendThatXp
     {
         public static void Init(string directory, string settingsJSON)
         {
+            Logger.Clear();
             var harmony = HarmonyInstance.Create("io.github.nbk_redspy.BT_SpendThatXp");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
